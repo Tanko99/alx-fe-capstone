@@ -159,7 +159,7 @@ const RegistrationForm = () => {
           </>
         )}
 
-        <button className="px-4 py-2 bg-green-600 text-gray-100
+        <button className="px-4 py-2 md:w-96 sm:w-64 bg-green-600 text-gray-100
         font-bold cursor-pointer rounded-lg hover:bg-green-900" type="submit">Create Account</button>
       </form>
 
