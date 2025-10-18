@@ -57,7 +57,7 @@ import { Link } from "react-router-dom";
         required
         />
 
-        <button className="px-6 py-2 rounded-lg shadow-lg cursor-pointer bg-green-700" type="submit" > Log In</button>
+        <button className="px-4 md:w-96 sm:w-64 py-2 rounded-lg shadow-lg cursor-pointer bg-green-700" type="submit" > Log In</button>
       </form>
     <p className="text-center md:text-xl sm:text-lg mt-2 text-base"> Don't have an account? {" "} 
       <Link className="text-green-600 hover:underline" to="/register">Sign Up here</Link>
