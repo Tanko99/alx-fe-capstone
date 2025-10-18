@@ -31,7 +31,7 @@ const HomePage = () => {
         <div className="min-h-screen bg-black text-gray-100 md:p-4 sm:p-8">
             <header>
                 <Navbar />
-                <h1 className="text-center text-5xl mt-20 font-bold">Find a local service here!</h1>
+                <h1 className="md:text-4xl sm:text-2xl text- xl  mt-20 font-bold">Find local professionals for your services!</h1>
             </header>
             <div>
                 <form onSubmit={handleSubmit} className="flex justify-center gap-x-5 mt-10  ">
@@ -49,18 +49,18 @@ const HomePage = () => {
                     onChange={(e) => setLocation(e.target.value)} 
                     placeholder="enter city to see services" />
 
-                    <button className="px-4 py-2 bg-purple-700 rounded-md font-bold" type="submit"> Search</button>
+                    <button className="px-4 py-2 bg-green-700 rounded-lg shadow-lg font-bold" type="submit"> Search</button>
                 </form>
             </div>
             <div>
-                <h2 className="text-center  mt-10 font-bold  md:text-3xl sm:text-xl">Popular categories </h2>
+                <h2 className="md:text-3xl sm:text-xl text-lg   mt-10 font-bold  md:text-3xl sm:text-xl">Popular categories </h2>
                 
              </div>
-             <div className="flex items-center mt-10 justify-center gap-x-4">
+             <div className="flex  mb-6 justify-center gap-x-4">
                 <button onClick={() => {
                     setSelectedCategory("Barbing");
                     window.location.href="/services";
-                }} className="bg-blue-600 rounded-lg font-bold 
+                }} className="bg-bgray-600 rounded-lg font-bold 
                 py-4 px-6"> <Scissors size={20} /> Barbing 
                 </button>
                 <button onClick={() => {

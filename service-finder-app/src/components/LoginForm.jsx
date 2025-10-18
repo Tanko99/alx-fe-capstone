@@ -1,11 +1,11 @@
 import useServiceStore from "./serviceStore";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
  function LoginForm () {
   const loginUser = useServiceStore(State => State.loginUser);
-  const error = useServiceStore(state => state.error);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -14,15 +14,23 @@ import { Link } from "react-router-dom";
     setFormData({
       ...formData, [e.target.name]: e.target.value
     });
-    set({eror: ""});
   };
 
   const handleSubmit = (e) => {
      e.preventDefault();
+     const {email, password} = formData;
+     if(!email){
+      setError("Email required");
+      return;
+     }
+     if(!password){
+      setError("Password required");
+      return;
+     }
 
      const success = loginUser(email, password);
      if(success){
-      Navigate("/home");
+      navigate("/home");
       setFormData({
         email: '',
         password: '',
@@ -39,6 +47,7 @@ import { Link } from "react-router-dom";
         <input className="md:w-76 sm:w-64 focus:border-green-700 focus:ring-2 focus:ring-green-700 focus:outline-none
         px-4 py-2 mb-2 rounded-lg shadow-lg"
         id="email"
+        name="email"
         type="email"
         value={formData.email}
         onChange={handleChange}
@@ -50,6 +59,7 @@ import { Link } from "react-router-dom";
         <input className="md:w-96 sm:w-64 focus:border-green-700 focus:ring-2 focus:ring-green-700 focus:outline-none
         px-4 py-2 mb-2 rounded-lg shadow-lg"
         id="password"
+        name="password"
         type="password"
         value={formData.password}
         onChange={handleChange}
@@ -62,6 +72,7 @@ import { Link } from "react-router-dom";
     <p className="text-center md:text-xl sm:text-lg mt-2 text-base"> Don't have an account? {" "} 
       <Link className="text-green-600 hover:underline" to="/register">Sign Up here</Link>
     </p>
+    {error && <p className="text-red-700">{error}</p>}
     </div>
   );
  }
