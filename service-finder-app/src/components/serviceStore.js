@@ -57,7 +57,7 @@ const useServiceStore = create((set, get) => ({
     localStorage.setItem("searchServiceType", type);
     set({serviceType: type});
   }, 
-  searchLocation: (loc) => {
+  setLocation: (loc) => {
     localStorage.setItem("searchLocation", loc);
     set({location: loc});
   },
