@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Scissors, Hammer, Paintbrush, Brush, Utensils } from "lucide-react";
 import useServiceStore from "../components/serviceStore";
 
@@ -16,13 +17,11 @@ function  HomePage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("submiting..");
         saveServiceType(serviceType);
         saveLocation(location);
 
         //delays for miliseconds to search and opens in services page
         setTimeout(() => {
-            console.log("searchung..")
             navigate("?services");
         }, 100);
         
@@ -96,6 +95,7 @@ function  HomePage() {
                   <Utensils size={45} /> Cooking
                  </button>
             </div>
+            <Footer />
         </div>
     );
 };
