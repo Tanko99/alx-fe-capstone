@@ -1,120 +1,155 @@
-🧭 Service Finder App
+# 🛠️ Service Finder App
 
-A modern React + Tailwind CSS web application that connects service seekers with local service providers such as shoe menders, cleaners, electricians, and more.
-Users can register, log in, search, filter, and view profiles of service providers by city, service type, or category.
+A **React + Tailwind CSS** web application that connects **service seekers** with **service providers**.  
+Users can create accounts, log in, and search for nearby providers such as *cleaners, shoe menders, electricians*, etc., filtered by city, service type, or category.  
 
-🖥️ Tech Stack
-Category	Tools / Frameworks
-Frontend	React (Vite)
-Styling	Tailwind CSS
-State Management	Zustand
-Version Control	Git & GitHub
-Code Editor	Visual Studio Code
-📂 Folder Structure
-SERVICE-FINDER-APP/
+---
+
+## 🚀 Overview
+
+**Service Finder** simplifies access to local services by connecting users (seekers) to skilled providers (vendors).  
+The app features **search filtering**, **user authentication**, and **profile management** — all built with modern web tools.
+
+---
+
+## 🌟 Features
+
+- 🔐 **User Authentication** — Register and login as a Seeker or Provider  
+- 🧭 **Homepage (Hero Section)** — Introduces the platform with a CTA to explore services  
+- 🔍 **Smart Search & Filtering** — Find providers by:
+  - City / Location  
+  - Service Type  
+  - Category  
+- 👩‍🔧 **Service Listing Page** — Displays available providers dynamically  
+- 👤 **Profile Page** — Users can view and update their info  
+- 💻 **Responsive Design** — Built with Tailwind CSS for all device sizes  
+- ⚙️ **State Management** — Handled via [Zustand](https://zustand-demo.pmnd.rs/) for simplicity and performance  
+- 🧰 **Version Control** — Managed using Git and GitHub  
+
+---
+
+## 🧩 Tech Stack
+
+| Category | Technology Used |
+|-----------|----------------|
+| **Frontend Framework** | [React](https://react.dev/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **State Management** | [Zustand](https://github.com/pmndrs/zustand) |
+| **Icons** | [Lucide React](https://lucide.dev/) |
+| **Package Manager** | npm |
+| **Code Editor** | [Visual Studio Code](https://code.visualstudio.com/) |
+| **Version Control** | Git + GitHub |
+
+---
+
+## 📂 Folder Structure
+
+service-finder-app/
 │
 ├── src/
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   ├── LoginForm.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── RegistrationForm.jsx
-│   │   └── serviceStore.js
-│   │
-│   ├── Pages/
-│   │   ├── HomePage.jsx
-│   │   ├── LandingPage.jsx
-│   │   ├── ProfilePage.jsx
-│   │   └── ServicesPage.jsx
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── index.css
-│   └── index.html
+│ ├── components/
+│ │ ├── Footer.jsx
+│ │ ├── LoginForm.jsx
+│ │ ├── Navbar.jsx
+│ │ ├── RegistrationForm.jsx
+│ │ └── serviceStore.js
+│ │
+│ ├── Pages/
+│ │ ├── HomePage.jsx
+│ │ ├── LandingPage.jsx
+│ │ ├── ProfilePage.jsx
+│ │ └── ServicesPage.jsx
+│ │
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── index.css
+│ └── index.html
 │
 ├── .gitignore
 ├── eslint.config.js
-└── package.json
+└── README.md
 
-🚀 Features
+yaml
+Copy code
 
-✅ User Authentication — Registration and Login using localStorage.
-✅ Dynamic Search & Filtering — Search for providers by service type or location.
-✅ Service Provider Profiles — View provider details such as name, contact, and service offered.
-✅ Editable User Profile — Logged-in users can update their personal info and upload a profile image.
-✅ Responsive UI — Optimized for both mobile and desktop screens.
-✅ Persistent State — Data is saved in localStorage via Zustand store.
-✅ Hero Section & CTA — Engaging homepage with call-to-action that links to service listings.
-✅ Modern Navbar & Footer — Clean and minimal layout with social media icons and copyright text.
+---
 
-⚙️ How to Run Locally
+## ⚙️ Installation & Setup
 
-Clone the Repository
+Follow these steps to run the project locally:
 
-git clone https://github.com/yourusername/service-finder-app.git
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/<your-username>/service-finder-app.git
+Navigate into the project directory
 
-
-Navigate to Project Directory
-
+bash
+Copy code
 cd service-finder-app
+Install dependencies
 
-
-Install Dependencies
-
+bash
+Copy code
 npm install
+Run the development server
 
-
-Run the Development Server
-
+bash
+Copy code
 npm run dev
+Open your browser and go to
+👉 http://localhost:5173 (or whichever port Vite assigns)
 
+🧠 Usage Guide
+Register a new user (as a Seeker or Provider)
 
-Open in Browser
-Visit → http://localhost:5173/
+Log in using your credentials
 
-🧠 Project Logic Overview
+Explore the homepage hero section, then click “Find Services” to access the Services page
 
-State Management:
-All data (users, currentUser, service filters) are managed via Zustand and persisted in localStorage.
+Use the search bar to filter providers by:
 
-Search & Filter:
-The ServicesPage filters providers based on:
+Location
 
-Selected category
+Type of service
 
-Service type input
+Category
 
-Location input
+Click on Profile to update your user information
 
-Profile Update:
-Users can edit and save their profile details (name, service type, location, contact, and image).
-(Currently, the Zustand store doesn’t auto-update after editing — this will be fixed soon.)
+🧪 Known Issues
+⚠️ Profile Update Bug:
+Currently, the Zustand store does not update automatically when users edit their profile info.
+This is being fixed in the next version.
 
-🧩 Known Issues / To Fix
+🧭 Future Improvements
+Add backend integration (Node.js / Firebase)
 
- Zustand store doesn’t refresh after profile update (requires reactive store sync).
+Improve profile image upload
 
- Add loading indicators for async actions.
+Add rating & review system
 
- Improve form validation for registration and login pages.
+Enable chat between seekers and providers
 
- Add a global toast/notification system for better UX.
-
-💡 Future Enhancements
-
-✅ Connect to a backend (Node.js / Firebase / Supabase) for real database storage.
-
-✅ Add user roles & authentication via JWT.
-
-✅ Enable messaging between seekers and providers.
-
-✅ Add service ratings and reviews.
-
-✅ Improve UI with animation and better category icons.
+🎥 Demo Video
+Watch the project walkthrough here:
+👉 Service Finder App Demo on Loom
+(Replace with your Loom video link once ready)
 
 👨‍💻 Author
-
 Tanko Fabrice Ngala
-Frontend Developer | ALX Africa Learner
-LinkedIn
+📍 Frontend Developer — ALX Software Engineering Program
+🔗 LinkedIn
+🧠 Passionate about building digital solutions that connect people and services.
+
+📝 License
+This project is open-source and available under the MIT License.
+
+Built with ❤️ by Tanko Fabrice Ngala
+
+
+---
+
+
+
+
 
