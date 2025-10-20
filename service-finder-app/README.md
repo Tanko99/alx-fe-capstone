@@ -69,8 +69,6 @@ service-finder-app/
 ├── eslint.config.js
 └── README.md
 
-yaml
-Copy code
 
 ---
 
@@ -79,23 +77,17 @@ Copy code
 Follow these steps to run the project locally:
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/service-finder-app.git
+   
+   git clone https://github.com/Tanko99/alx-fe-capstone/service-finder-app.git
 Navigate into the project directory
 
-bash
-Copy code
-cd service-finder-app
+** cd service-finder-app **
 Install dependencies
 
-bash
-Copy code
-npm install
+** npm install **
 Run the development server
 
-bash
-Copy code
-npm run dev
+** npm run dev **
 Open your browser and go to
 👉 http://localhost:5173 (or whichever port Vite assigns)
 
@@ -132,8 +124,7 @@ Enable chat between seekers and providers
 
 🎥 Demo Video
 Watch the project walkthrough here:
-👉 Service Finder App Demo on Loom
-(Replace with your Loom video link once ready)
+👉 https://www.loom.com/share/908106c9b8694b79a5132bc4eb72d6fa?sid=79e60b46-3c96-4ab7-bbcc-1ed9a023bceb
 
 👨‍💻 Author
 Tanko Fabrice Ngala
